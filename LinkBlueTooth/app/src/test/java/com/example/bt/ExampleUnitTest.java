@@ -1,4 +1,4 @@
-package com.example.linkbluetooth;
+package com.example.bt;
 
 import org.junit.Test;
 
