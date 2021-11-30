@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,6 +15,101 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="가스"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/readBuffer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="0.9"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/read_buffer" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="온도"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/readBuffer2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="0.9"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/read_buffer" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="습도"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/readBuffer3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="0.9"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/read_buffer" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/helmetPicture"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/helmet" />
+
+
         <CheckBox
             android:id="@+id/checkboxLED1"
             android:layout_width="wrap_content"
@@ -26,86 +122,8 @@
 
             android:scaleX="1.7"
             android:scaleY="1.7"
-            android:text="Toggle LED"
+            android:text="알림응답"
             android:textStyle="bold" />
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.1"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:text="아두이노 센서1:"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/readBuffer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_weight="0.9"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:text="@string/read_buffer" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.1"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:text="아두이노 센서2:"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/readBuffer2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_weight="0.9"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:text="@string/read_buffer" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.1"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:text="아두이노 센서3:"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/readBuffer3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_weight="0.9"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:text="@string/read_buffer" />
-
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -118,7 +136,7 @@
                 android:layout_weight="0.1"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:text="상태:"
+                android:text="블루투스 상태:"
                 android:textStyle="bold" />
 
             <TextView
@@ -135,11 +153,10 @@
 
         </LinearLayout>
 
-
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Bluetooth ON"
+            android:text="블루투스 연결 실행"
             android:id="@+id/scan"
             android:layout_centerVertical="true"
             android:layout_toStartOf="@+id/off" />
@@ -147,7 +164,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Bluetooth OFF"
+            android:text="블루투스 연결 중지"
             android:id="@+id/off"
             android:layout_alignBottom="@+id/scan"
             android:layout_toEndOf="@+id/PairedBtn"
@@ -156,7 +173,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Show paired Devices"
+            android:text="기존 장치 목록"
             android:id="@+id/PairedBtn"
             android:layout_below="@+id/scan"
             android:layout_toStartOf="@+id/discover" />
@@ -164,7 +181,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Discover New Devices"
+            android:text="새 장치 검색"
             android:id="@+id/discover"
             android:layout_below="@+id/off"
             android:layout_toRightOf="@+id/checkboxLED1"
