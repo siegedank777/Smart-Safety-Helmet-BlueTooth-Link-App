@@ -32,7 +32,12 @@ public class MainActivity extends AppCompatActivity {
 
     // GUI Components
     private TextView mBluetoothStatus;
+
     private TextView mReadBuffer;
+    private TextView mReadBuffer2;
+    private TextView mReadBuffer3;
+
+
     private Button mScanBtn;
     private Button mOffBtn;
     private Button mListPairedDevicesBtn;
@@ -62,7 +67,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mBluetoothStatus = (TextView)findViewById(R.id.bluetoothStatus);
+
         mReadBuffer = (TextView) findViewById(R.id.readBuffer);
+        mReadBuffer2 = (TextView) findViewById(R.id.readBuffer2);
+        mReadBuffer3 = (TextView) findViewById(R.id.readBuffer3);
+
         mScanBtn = (Button)findViewById(R.id.scan);
         mOffBtn = (Button)findViewById(R.id.off);
         mDiscoverBtn = (Button)findViewById(R.id.discover);
@@ -85,10 +94,22 @@ public class MainActivity extends AppCompatActivity {
                     String readMessage = null;
                     try {
                         readMessage = new String((byte[]) msg.obj, "UTF-8");
+
                     } catch (UnsupportedEncodingException e) {
                         e.printStackTrace();
                     }
-                    mReadBuffer.setText(readMessage);
+                    //mReadBuffer.setText(readMessage);
+
+                    //바꿀거
+
+                    String[] array = readMessage.split(",");
+
+                    mReadBuffer.setText(array[0]);
+
+                    mReadBuffer2.setText(array[1]);
+
+                    mReadBuffer3.setText(array[2]);
+
                 }
 
                 if(msg.what == CONNECTING_STATUS){
